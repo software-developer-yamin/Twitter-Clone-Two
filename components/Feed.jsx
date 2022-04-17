@@ -9,15 +9,16 @@ import FeedPost from './FeedPost';
 function Feed() {
      const [posts, setPosts] = useState([]);
 
-
-     useEffect(() => {
-          onSnapshot(
-               query(collection(db, "posts"), orderBy("timestamp", "desc")),
-               (snapshot) => {
-                    setPosts(snapshot.docs);
-               }
-          )
-     }, [db]);
+     useEffect(
+          () =>
+               onSnapshot(
+                    query(collection(db, "posts"), orderBy("timestamp", "desc")),
+                    (snapshot) => {
+                         setPosts(snapshot.docs);
+                    }
+               ),
+          [db]
+     );
 
 
      return (

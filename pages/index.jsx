@@ -19,11 +19,6 @@ export default function Home({ trendingResults, followResults, providers }) {
 
      return (
           <Box component="section" >
-               <Head>
-                    <title>Twitter Clone</title>
-                    <link rel="icon" href="/favicon.ico" />
-               </Head>
-
                <Box display="flex" minHeight="100vh" maxWidth="1500px" mx="auto" component="main">
                     <Sidebar />
                     <Feed />
