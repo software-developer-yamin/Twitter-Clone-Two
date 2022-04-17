@@ -24,6 +24,7 @@ export default function MyApp(props) {
       <RecoilRoot>
         <CacheProvider value={emotionCache}>
           <Head>
+            <title>Twitter Clone</title>
             <meta name="viewport" content="initial-scale=1, width=device-width" />
           </Head>
           <ThemeProvider theme={theme}>
